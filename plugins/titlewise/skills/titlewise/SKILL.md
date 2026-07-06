@@ -1,15 +1,15 @@
 ---
-name: label
-description: Use when the user wants to name, title, or label the current conversation, or asks for a title suggestion. Triggers on phrases like baslik oner, konusmaya isim ver, sohbeti adlandir, bu konusmaya baslik, label this chat, name this conversation, or the command /label. Analyzes the current conversation, interactively asks (via AskUserQuestion) for language (user language, EN, or CHN), length, date, and style preferences unless already given, then produces the matching title variants in the chosen languages plus a short description and tags. Suggestion only; it proposes titles you copy and apply yourself, and never modifies the session.
+name: titlewise
+description: Use when the user wants to name, title, or label the current conversation, or asks for a title suggestion. Triggers on phrases like baslik oner, konusmaya isim ver, sohbeti adlandir, bu konusmaya baslik, label this chat, name this conversation, or the command /titlewise. Analyzes the current conversation, interactively asks (via AskUserQuestion) for language (user language, EN, or CHN), length, date, and style preferences unless already given, then produces the matching title variants in the chosen languages plus a short description and tags. Suggestion only; it proposes titles you copy and apply yourself, and never modifies the session.
 ---
 
-# label
+# titlewise
 
 Generate rich, well-formatted titles (plus a description and tags) for the CURRENT conversation, so it is easy to find later by date and topic. It is interactive: it asks the user how they want the title, then produces matching variants. Suggestion only - it proposes titles and never changes the session or its stored title.
 
 ## When to use
 
-Trigger when the user asks to name, title, or label the current conversation - for example "baslik oner", "konusmaya isim ver", "sohbeti adlandir", "label this chat", "name this conversation", or the command `/label`.
+Trigger when the user asks to name, title, or label the current conversation - for example "baslik oner", "konusmaya isim ver", "sohbeti adlandir", "label this chat", "name this conversation", or the command `/titlewise`.
 
 ## Why suggestion-only
 
@@ -30,7 +30,7 @@ If the user did NOT already state preferences in their invocation, ask them in O
 - **Date** (multi-select): Prefix (`YYYY-MM-DD - ...`) / Suffix (`... - YYYY-MM-DD`) / None / Month (`YYYY-MM`)
 - **Style** (multi-select): Descriptive (`+` joined) / Slug (kebab-case) / Keyword (dot-separated) / Outcome-focused / Emoji
 
-If the user already specified preferences in the invocation (e.g. `/label short english slug`), skip those questions and go straight to generation. If the user gives no answer or dismisses, default to: user language + all three lengths + date prefix + descriptive.
+If the user already specified preferences in the invocation (e.g. `/titlewise short english slug`), skip those questions and go straight to generation. If the user gives no answer or dismisses, default to: user language + all three lengths + date prefix + descriptive.
 
 ### 3. Generate the title variant(s)
 Produce the variant(s) that match the chosen dimensions, drawing from the catalog below. If multiple options were picked in a dimension, produce one variant per combination. Rules:

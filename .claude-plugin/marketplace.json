@@ -1,19 +1,19 @@
 {
-  "name": "label",
+  "name": "titlewise",
   "owner": {
     "name": "Battlelamb"
   },
   "description": "A Claude Code skill that titles and labels the current conversation.",
   "plugins": [
     {
-      "name": "label",
-      "source": "./plugins/label",
+      "name": "titlewise",
+      "source": "./plugins/titlewise",
       "description": "Interactively generate rich, dated, multi-variant titles (plus a description and tags) for the current conversation.",
       "version": "1.0.0",
       "author": {
         "name": "Battlelamb"
       },
-      "homepage": "https://github.com/Battlelamb/label",
+      "homepage": "https://github.com/Battlelamb/titlewise",
       "category": "productivity",
       "tags": ["conversation", "title", "naming", "session", "label", "labeling"]
     }
