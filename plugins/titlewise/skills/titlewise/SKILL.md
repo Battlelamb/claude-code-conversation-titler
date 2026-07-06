@@ -28,7 +28,7 @@ If the user did NOT already state preferences in their invocation, ask them in O
 - **Language** (multi-select): User language (the language of the conversation - auto-detect) / English (EN) / Chinese (CHN)
 - **Length**: Long / Medium / Short
 - **Date** (multi-select): Prefix (`YYYY-MM-DD - ...`) / Suffix (`... - YYYY-MM-DD`) / None / Month (`YYYY-MM`)
-- **Style** (multi-select): Descriptive (`+` joined) / Slug (kebab-case) / Keyword (dot-separated) / Outcome-focused / Emoji
+- **Style** (multi-select): Descriptive (`+` joined) / Slug (kebab-case) / Keyword (middot `·`) / Bracket (`[date][tool]`) / Outcome-focused / Emoji
 
 If the user already specified preferences in the invocation (e.g. `/titlewise short english slug`), skip those questions and go straight to generation. If the user gives no answer or dismisses, default to: user language + all three lengths + date prefix + descriptive.
 
@@ -40,7 +40,7 @@ Produce the variant(s) that match the chosen dimensions, drawing from the catalo
 - Produce each variant in each selected language. Match the target language's proper characters/diacritics; when the language is Turkish, use ç, ğ, ı, ö, ş, ü.
 - Never use an em dash - use a normal hyphen.
 
-Then pick ONE **recommended** variant: the best default for scanning a history list - dated, medium length, descriptive, in the user's language, and short enough to read at a glance (aim for about 70 characters or fewer).
+Then pick ONE **recommended** variant: the best default among those produced for scanning a history list - prefer dated + medium length + descriptive in the user's language when those were selected, and keep it short enough to read at a glance (about 70 characters or fewer).
 
 #### Catalog (vocabulary)
 
@@ -54,7 +54,7 @@ Then pick ONE **recommended** variant: the best default for scanning a history l
 
 **B) Compact / search-friendly**
 - Slug (kebab): `<tool>-<topic>-<topic>-YYYY-MM-DD` (filename-safe: only lowercase letters, digits, hyphens)
-- Keyword (dot): `<tool> · <topic1> · <topic2> · <topic3>`
+- Keyword (middot): `<tool> · <topic1> · <topic2> · <topic3>`
 - Bracket tag: `[YYYY-MM-DD][<tool>] <topic1> + <topic2>`
 - Date suffix: `<Main Topic> (<tool>) - YYYY-MM-DD`
 - Month: `YYYY-MM - <tool> <main topic>`
@@ -65,7 +65,7 @@ Then pick ONE **recommended** variant: the best default for scanning a history l
   feature ✨ · new/launch 🎉 · bugfix 🐛 · fix/patch 🔧 · refactor ♻️ · docs 📝 · perf ⚡ · security 🔒 ·
   release/ship 🚀 · config ⚙️ · tests ✅ · data/db 🗄️ · infra 🏗️ · design/ui 🎨 · research 🔎
 
-For more options, cross-product the dimensions: language x length x date-position x style.
+For more options, cross-product the dimensions: language x length x date-position x style. The Slug, Keyword, Bracket, and Month styles carry their own built-in date handling (or none); the Date dimension governs the descriptive (length) and outcome-focused variants.
 
 ### 4. Description
 Write a 3-6 sentence summary paragraph (what was done, the outcome), in the selected language.
@@ -84,6 +84,7 @@ For a session that fixed a payment timeout bug:
 - Short + dated: `2025-03-14 - payment timeout fix`
 - Slug: `payments-service-timeout-fix-2025-03-14`
 - Keyword: `payments-service · timeout · retry · integration-tests`
+- Bracket: `[2025-03-14][payments-service] timeout fix + retry logic`
 - Emoji: `🐛 payments timeout fix (2025-03-14)`
 - Tags: `2025-03-14, payments-service, timeout, retry, backoff, integration-tests, bugfix`
 

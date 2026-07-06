@@ -133,7 +133,7 @@ plugins/titlewise/skills/titlewise/  ->  ~/.claude/skills/titlewise/
 
 ### 4. 外加描述和标签
 
-> **描述** - 通过为 payments 服务添加带指数退避的有限重试，修复了一个请求超时 bug，并用集成测试覆盖了该路径。改动仅限于客户端层，并置于现有的超时配置开关之后。
+> **描述** - 通过为 payments 服务添加带指数退避的有限重试，修复了一个请求超时 bug，并用集成测试覆盖了该路径。改动仅限于客户端层，并置于现有的超时配置开关之后。未改动任何公开 API 契约，因此下游消费者不受影响。
 >
 > **标签** - `2025-03-14, payments-service, timeout, retry, backoff, integration-tests, bugfix`
 

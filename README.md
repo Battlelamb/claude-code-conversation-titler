@@ -8,7 +8,7 @@
 &nbsp;[![Stars](https://img.shields.io/github/stars/Battlelamb/claude-code-conversation-titler?style=flat-square&color=8b5cf6&logo=github)](https://github.com/Battlelamb/claude-code-conversation-titler/stargazers)
 &nbsp;[![License](https://img.shields.io/badge/license-MIT-22d3ee?style=flat-square)](LICENSE)
 &nbsp;[![Claude Code](https://img.shields.io/badge/Claude_Code-skill_%26_plugin-ec4899?style=flat-square)](https://code.claude.com)
-&nbsp;[![PRs welcome](https://img.shields.io/badge/PRs-welcome-2dcd7a?style=flat-square)](#contributing)
+&nbsp;[![PRs welcome](https://img.shields.io/badge/PRs-welcome-2dcd7a?style=flat-square)](https://github.com/Battlelamb/claude-code-conversation-titler/pulls)
 
 <br>
 
@@ -133,7 +133,7 @@ Here, for a session that fixed a payment timeout bug:
 
 ### 4. Plus a description and tags
 
-> **Description** - Fixed a request-timeout bug in the payments service by adding bounded retries with exponential backoff, then covered the path with integration tests. The change is isolated to the client layer and ships behind the existing timeout config.
+> **Description** - Fixed a request-timeout bug in the payments service by adding bounded retries with exponential backoff, then covered the path with integration tests. The change is isolated to the client layer and ships behind the existing timeout config. No public API contracts changed, so downstream consumers are unaffected.
 >
 > **Tags** - `2025-03-14, payments-service, timeout, retry, backoff, integration-tests, bugfix`
 

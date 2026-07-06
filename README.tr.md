@@ -133,7 +133,7 @@ Burada, bir ödeme zaman aşımı hatasını düzelten bir oturum için:
 
 ### 4. Ayrıca açıklama ve etiketler
 
-> **Açıklama** - payments servisindeki bir istek zaman aşımı hatası, üstel geri çekilmeli sınırlı yeniden denemeler eklenerek düzeltildi; ardından bu yol entegrasyon testleriyle kapsandı. Değişiklik istemci katmanıyla sınırlı ve mevcut timeout konfigürasyonunun arkasında devreye giriyor.
+> **Açıklama** - payments servisindeki bir istek zaman aşımı hatası, üstel geri çekilmeli sınırlı yeniden denemeler eklenerek düzeltildi; ardından bu yol entegrasyon testleriyle kapsandı. Değişiklik istemci katmanıyla sınırlı ve mevcut timeout konfigürasyonunun arkasında devreye giriyor. Herkese açık API sözleşmeleri değişmedi, dolayısıyla downstream tüketiciler etkilenmiyor.
 >
 > **Etiketler** - `2025-03-14, payments-service, timeout, retry, backoff, integration-tests, bugfix`
 

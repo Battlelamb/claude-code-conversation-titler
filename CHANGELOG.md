@@ -3,6 +3,17 @@
 All notable changes to **titlewise** are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/) and [Semantic Versioning](https://semver.org/).
 
+## [1.1.1] - 2026-07-06
+
+### Fixed
+- **Bracket** is now a selectable Style option, so every catalogued variant is reachable from the Q&A.
+- The **recommended pick** no longer overrides the user's own dimension choices - it chooses the best among the variants actually produced.
+- Clarified the Keyword separator (middot `·`) and how the Date dimension interacts with date-carrying styles (slug, month, bracket).
+
+### Changed
+- Example description extended to satisfy the 3-6 sentence rule; the PRs-welcome badge now points to the pull-requests page across all READMEs.
+- Added a `keywords` array to the plugin manifest for discoverability.
+
 ## [1.1.0] - 2026-07-06
 
 ### Added

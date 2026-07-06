@@ -1,9 +1,10 @@
 {
   "name": "titlewise",
   "description": "Interactively generate rich, dated, multi-variant titles (plus a recommended pick, a description, and tags) for the current conversation. Suggestion only; proposes titles you copy and apply yourself.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": {
     "name": "Battlelamb"
   },
-  "homepage": "https://github.com/Battlelamb/claude-code-conversation-titler"
+  "homepage": "https://github.com/Battlelamb/claude-code-conversation-titler",
+  "keywords": ["claude-code", "skill", "plugin", "conversation", "title", "naming", "productivity", "multilingual"]
 }
