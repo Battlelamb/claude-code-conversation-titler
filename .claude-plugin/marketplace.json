@@ -1,0 +1,21 @@
+{
+  "name": "conversation-labeler",
+  "owner": {
+    "name": "Battlelamb"
+  },
+  "description": "Skills for labeling and organizing Claude Code conversations.",
+  "plugins": [
+    {
+      "name": "conversation-labeler",
+      "source": "./plugins/conversation-labeler",
+      "description": "Interactively generate rich, dated, multi-variant titles (plus a description and tags) for the current conversation.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Battlelamb"
+      },
+      "homepage": "https://github.com/Battlelamb/conversation-labeler",
+      "category": "productivity",
+      "tags": ["conversation", "title", "naming", "session", "rename", "labeling"]
+    }
+  ]
+}

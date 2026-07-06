@@ -1,0 +1,9 @@
+{
+  "name": "conversation-labeler",
+  "description": "Interactively generate rich, dated, multi-variant titles (plus a description and tags) for the current conversation. Suggestion only; produces a ready-to-paste /rename command.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Battlelamb"
+  },
+  "homepage": "https://github.com/Battlelamb/conversation-labeler"
+}
