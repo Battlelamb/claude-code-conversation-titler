@@ -16,6 +16,8 @@
 
 **titlewise** is an interactive [Claude Code](https://code.claude.com) skill that reads your current conversation and proposes clean, well-structured **titles** - long or short, dated or not, in your own language, English, or Chinese - along with a short description and search tags. You pick the one you like and set it as the conversation title.
 
+Think of it as a **conversation title generator** for Claude Code: name, title, or label any chat session in seconds, so past conversations are easy to find later.
+
 It is **suggestion-only**: it proposes, you apply. It never touches your session or transcript.
 
 ## Features
