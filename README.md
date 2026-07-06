@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🏷️ conversation-labeler
+# 🏷️ label
 
 **Turn any Claude Code conversation into a title you can actually find later.**
 
@@ -14,7 +14,7 @@
 
 ## Overview
 
-**conversation-labeler** is an interactive [Claude Code](https://code.claude.com) skill that reads your current conversation and proposes clean, well-structured **titles** - long or short, dated or not, in your own language, English, or Chinese - along with a short description and search tags. You pick the one you like and set it as the conversation title.
+**label** is an interactive [Claude Code](https://code.claude.com) skill that reads your current conversation and proposes clean, well-structured **titles** - long or short, dated or not, in your own language, English, or Chinese - along with a short description and search tags. You pick the one you like and set it as the conversation title.
 
 It is **suggestion-only**: it proposes, you apply. It never touches your session or transcript.
 
@@ -31,41 +31,41 @@ It is **suggestion-only**: it proposes, you apply. It never touches your session
 
 ## The problem it solves
 
-Auto-generated conversation titles are generic (think *"Credential information request"*) and hard to scan weeks later. conversation-labeler turns the actual work of the session into a title you would naturally search for - and gives you several formats to choose from.
+Auto-generated conversation titles are generic (think *"Credential information request"*) and hard to scan weeks later. **label** turns the actual work of the session into a title you would naturally search for - and gives you several formats to choose from.
 
 ## Installation
 
 ### As a plugin (recommended)
 
-```
-/plugin marketplace add Battlelamb/conversation-labeler
-/plugin install conversation-labeler@conversation-labeler
+```text
+/plugin marketplace add Battlelamb/label
+/plugin install label@label
 ```
 
-Update later with `/plugin marketplace update conversation-labeler`.
+Update later with `/plugin marketplace update label`.
 
 ### As a standalone skill
 
 Copy the skill folder into your personal skills directory:
 
-```
-plugins/conversation-labeler/skills/conversation-labeler/  ->  ~/.claude/skills/conversation-labeler/
+```text
+plugins/label/skills/label/  ->  ~/.claude/skills/label/
 ```
 
 ## Usage
 
 Invoke it, then answer the four quick questions:
 
-```
-/conversation-labeler
+```text
+/label
 ```
 
 Or trigger it in natural language - *"name this chat"*, *"suggest a title"*, *"başlık öner"*.
 
 **Skip the questions** by passing your preferences inline:
 
-```
-/conversation-labeler short english slug
+```text
+/label short english slug
 ```
 
 ## Example
@@ -99,7 +99,7 @@ Copy the variant you like and set it as the conversation title.
 3. **Generates** the matching title variants, plus a description and tags.
 4. **Presents** everything copy-ready. You choose one and apply it in your client - the skill never edits the session.
 
-> **Why not apply the title automatically?** The host app owns the conversation title and regenerates it on its own, so a skill cannot reliably set it and editing the live transcript is unsafe. conversation-labeler stops at proposing - clean and non-destructive.
+> **Why not apply the title automatically?** The host app owns the conversation title and regenerates it on its own, so a skill cannot reliably set it and editing the live transcript is unsafe. **label** stops at proposing - clean and non-destructive.
 
 ## Language support
 
